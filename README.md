@@ -1,7 +1,8 @@
-##Instructions
+## Instructions
+
 Please find below the instructions to build and run the container
 
-##Building the image from Dockerfile
+## Building the image from Dockerfile
 
 docker build . -t <user-account>/<image-name>:<version>
 

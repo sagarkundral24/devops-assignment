@@ -1,16 +1,18 @@
-## Assignment
-I have a node web application has a need to execute arbitrary python code. Use this repository as a starting point.
+##Instructions
+Please find below the instructions to build and run the container
 
-### Goal
-1. Complete Dockerfile so container can be built and run locally
-2. Instructions on how to run container in the README.md
-3. While running container endpoint GET '/ping' return 200 status
+##Building the image from Dockerfile
 
-### Dockerfile Requirements
-1. Should use parent container ( FROM node:12.13.1-alpine )
-2. Install dependencies in requirements.txt file ( pip3 install -r requirements.txt )
-3. README should include instructions to build and run the container
-4. Bonus: Add a Makefile to simplify and improve the build + run process
+docker build . -t <user-account>/<image-name>:<version>
 
-### Submission Guidelines
-1. Commit and push to your own repo and send us the repo link. Please do not fork or use our name in your repo.
+eg: docker build . -t sagarkundral24/node-web-app:v2
+
+## Running the container from the image created above
+
+docker run -p <any-port>:<container-port> -d  --name <container-name> <user-account>/<image-name>:<version>
+
+eg: docker run -p 50002:3000 -d --name node-container-1 sagarkundral24/node-web-app:v2
+
+Once the container is up. You can test the application by running below command on your local machine
+
+curl localhost:50002/ping

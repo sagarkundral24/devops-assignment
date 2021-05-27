@@ -1,0 +1,2 @@
+NS=sagarkundral24
+PORTS = -p 50002:3000

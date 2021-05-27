@@ -4,13 +4,13 @@ Please find below the instructions to build and run the container
 
 ## Building the image from Dockerfile
 
-docker build . -t <user-account>/<image-name>:<version>
+docker build . -t user-account/image-name:version
 
 eg: docker build . -t sagarkundral24/node-web-app:v2
 
 ## Running the container from the image created above
 
-docker run -p <any-port>:<container-port> -d  --name <container-name> <user-account>/<image-name>:<version>
+docker run -p any-port:container-port -d  --name container-name user-account/image-name:version
 
 eg: docker run -p 50002:3000 -d --name node-container-1 sagarkundral24/node-web-app:v2
 
